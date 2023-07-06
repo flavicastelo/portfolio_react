@@ -14,19 +14,22 @@ export const ContainerIcons = styled.div`
 `;
 
 export const ItemMenu = styled.button`
-    background-color: transparent;
+    background-color: ${(props) => props.clicked ? '#00a2dd': 'transparent'};
     border: none;
     outline: 0;
     cursor: pointer;
-   
+    border-radius: 5px;
+    height: 1.5em;
+    &:hover{
+        background-color: #00a2dd;
+    } 
 `;
 
 export const TextMenu = styled.p`
-    color: ${(props) => props.clicked ? '#00d8ff': '#8791AF'};
+    color: #FFF;
     
-    &:hover{
-        color: #00d8ff;
-    } 
+    padding: 0 1rem;
+   
 `;
 
 export const LinkCurriculo = styled.a`
@@ -34,11 +37,13 @@ export const LinkCurriculo = styled.a`
 `;
 export const CurriculoBtn = styled.button`
     background-color: transparent;
-    border: 1px solid #00d8ff;
+    border: 1px solid #00a2dd;
     border-radius: 5px;
     outline: 0;
     cursor: pointer;
-    width: 5rem;
     height: 1.5em;
-    
+     
+    &:hover{
+        background-color: #00a2dd;
+    } 
 `;

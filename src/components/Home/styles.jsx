@@ -1,45 +1,63 @@
-import styled, {keyframes} from "styled-components";
-import '../../index.css';
+import styled, { keyframes, css } from "styled-components";
+import { colors } from "../../themes";
 
 export const ContainerHome = styled.div` 
     display: flex;
-    background-color: #252627;
-    flex-direction: column;
+    background-color: ${colors.color2};
+    flex-direction: column;    
+    padding: 2rem;
     
 `;
+
 export const ContainerBody = styled.body`
-    margin: 0 auto;
-    height: 100vh;
+    margin: 2rem;
+    height: 100%;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: center;
+    @media (max-width: 768px) {
+        flex-direction: column;
+        margin: 0;
+        height: 90.5vh;
+    }
+`;
+export const ContainerText = styled.div`
+    margin: 0;
+    display: flex;
     flex-direction: column;
     justify-content: center;
+
 `;
 export const TextTitle = styled.p`
-    color: #afafaf;
+    color: ${colors.color5};
+    font-size: 24px;
 `;
 export const Name = styled.h1`
-    color: #5ccee2;
-    font-size: 36px;
+    color: ${colors.color6};
+    font-size: 32px;
 `;
 export const Description = styled.p`
-    color: #afafaf;
-   font-size: 18px;
+    color: ${colors.color5};
+    font-size: 14px;
+    margin-top: 1rem;
+    text-align: justify;
 `;
-
-//animations
-export const blinkTextCursor = keyframes`
-    from {border-right-color: rgba(0, 0, 0, .75);}
-    to {border-right-color: transparent}
+export const ImgProfile = styled.img`
+    height: 400px;
+    border-radius: 50%;
+    /* background-color: ${colors.color3}; */
+    margin: 2rem auto;
+    margin-top: 0;
+    @media (max-width: 768px) {
+        height: 150px;
+    }
 `;
-export const TextCursor = styled.span`
-    border-right: 2px solid rgba(0, 0, 0, .75);
-  display: inline;
-
-  /* A mágica acontece aqui */
-  animation: ${blinkTextCursor} 0.7s steps(44) infinite normal;
+export const Tag = styled.p`
+    color: ${colors.color6};
+    font-size: 24px;
 `;
-export const Container = styled.p`
-  display: inline-block;
-  margin: 0;
+export const DivInLine = styled.div`
+    display: flex;
+    flex-direction: row;
 `;

@@ -7,18 +7,18 @@ export default function NavBar(props) {
     return (
 
         <ContainerIcons>
-            <ItemMenu onClick={() => navigate("/")} >
-                <TextMenu clicked={props.isHome}>Sobre</TextMenu>
+            <ItemMenu clicked={props.isHome} onClick={() => navigate("/")} >
+                <TextMenu >Sobre</TextMenu>
             </ItemMenu>
-            <ItemMenu onClick={() => navigate("/experience")}>
-                <TextMenu clicked={props.isExp}>Experiências</TextMenu>
+            <ItemMenu clicked={props.isExp} onClick={() => navigate("/experience")}>
+                <TextMenu >Experiências</TextMenu>
             </ItemMenu>
-            <ItemMenu onClick={() => navigate("/contact")}>
-                <TextMenu clicked={props.isContact} >Contato</TextMenu>
+            <ItemMenu clicked={props.isContact} onClick={() => navigate("/contact")}>
+                <TextMenu  >Contato</TextMenu>
             </ItemMenu>
             <CurriculoBtn>
-                <LinkCurriculo target="_blank" href="https://curriculo-flaviana.vercel.app/">
-                    <TextMenu clicked={props.isResume}>Currículo</TextMenu>
+                <LinkCurriculo clicked={props.isResume} target="_blank" href="https://curriculo-flaviana.vercel.app/">
+                    <TextMenu >Currículo</TextMenu>
                 </LinkCurriculo>
             </CurriculoBtn>
         </ContainerIcons>
