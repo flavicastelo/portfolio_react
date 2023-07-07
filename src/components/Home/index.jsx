@@ -2,12 +2,20 @@ import { useMediaQuery } from 'react-responsive';
 import NavBar from "../NavBar";
 import { ContainerBody, ContainerHome, ContainerText, Description, DivInLine, ImgProfile, Name, Tag, TextTitle } from "./styles";
 import profileImg from '../../assets/profileImg.png';
+import MenuHamburger from '../MenuHamburger';
+import { useState } from 'react';
 export default function Home() {
     const isMobile = useMediaQuery({ maxWidth: 768 });
+    const [showMenu, setShowMenu] = useState(false); 
+
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  };
+
     return (
 
         <ContainerHome>
-            {!isMobile && <NavBar isHome={true} />}
+            {isMobile ? <MenuHamburger showMenu={showMenu} toggleMenu={toggleMenu} /> : <NavBar isHome={true} />}
             <ContainerBody >
                 <ImgProfile src={profileImg} />
                 <ContainerText>
