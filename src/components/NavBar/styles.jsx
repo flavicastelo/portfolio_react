@@ -25,7 +25,6 @@ export const ItemMenu = styled.button`
 
 export const TextMenu = styled.p`
     color: #FFF;
-    
     padding: 0 1rem;
    
 `;

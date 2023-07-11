@@ -2,13 +2,20 @@ import styled from 'styled-components';
 import { colors } from "../../themes";
 
 export const ContainerMenu = styled.div`
-    display: flex;
-    flex-direction: row;
-    align-items: start;
-    justify-content: space-between;
+    padding: 0.5rem;
+    background-color: ${colors.color3}; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100vw;
 `;
 export const ContainerIcons = styled.div`
+    flex-direction: row;
     gap: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `;
 export const ContainerOpen= styled.div`
     display: flex;
@@ -25,14 +32,13 @@ export const ContentButton = styled.div`
     align-items: start;
     position: absolute; 
     top: 10%; 
-    
+    gap: 0.5rem;
 `;
 export const ButtonMenu = styled.button`
     border: none;
     background-color: transparent;
     cursor: pointer;
     color: ${colors.color5};
-    padding: 0.5rem;
     top: 2rem;
     font-size: 12px;
 `;
@@ -42,10 +48,10 @@ export const ButtonCurriculum = styled.a`
     background-color: transparent;
     cursor: pointer;
     color: ${colors.color6};
-    padding: 0.5rem;
     font-size: 12px;
 `;
 export const LinkIcon = styled.a`
     text-decoration: none;
     color: ${colors.color5};
+    
 `;
