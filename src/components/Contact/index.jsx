@@ -4,16 +4,15 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 import { ContainerBodyContact, ContainerContact, ContainerIconsContact, ContainerTextContact, DescriptionContact, LinkContact, TitleContact } from './styles';
-import { Link } from 'react-scroll';
 
-export default function Contact() {
-
+export default function Contact(props) {
+    const { darkMode } = props;
     return (
-        <ContainerContact id='contact'>
+        <ContainerContact darkMode={darkMode} id='contact'>
             <ContainerBodyContact>
                 <ContainerTextContact>
                     <TitleContact>Vamos trabalhar juntos?</TitleContact>
-                    <DescriptionContact>Entre em contato!</DescriptionContact>
+                    <DescriptionContact darkMode={darkMode} >Entre em contato!</DescriptionContact>
                 </ContainerTextContact>
                 <ContainerIconsContact>
                     <LinkContact target='_blank' href='https://github.com/flavicastelo'>

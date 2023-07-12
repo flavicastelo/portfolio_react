@@ -9,24 +9,31 @@ import About from './components/About';
 import Stack from './components/Stack';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
+import ButtonDarkMode from './components/ButtonDakMode';
 
 function App() {
   const isMobile = useMediaQuery({ maxWidth: 768 });
-  const [showMenu, setShowMenu] = useState(false);
-  const toggleMenu = () => {
-    setShowMenu(!showMenu);
-  };
+  const [darkMode, setDarkMode] = useState(false);
+
+  function toggleDarkMode() {
+    setDarkMode(!darkMode);
+  }
 
   return (
     <>
-      {isMobile ? <MenuHamburger showMenu={showMenu} toggleMenu={toggleMenu} /> : <NavBar isHome={true} />}
-      <Home />
-      <About />
-      <Stack />
-      <Experience />
-      <Contact />
-      </>
-  )
+      {isMobile ? (
+        <MenuHamburger darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+      ) : (
+        <NavBar  darkMode={darkMode}  />
+      )}
+      <Home darkMode={darkMode} />
+      <About darkMode={darkMode} />
+      <Stack darkMode={darkMode} />
+      <Experience darkMode={darkMode} />
+      <Contact darkMode={darkMode} />
+      {isMobile ? (null): (<ButtonDarkMode darkMode={darkMode} toggleDarkMode={toggleDarkMode} />)}
+    </>
+  );
 }
 
-export default App
+export default App;

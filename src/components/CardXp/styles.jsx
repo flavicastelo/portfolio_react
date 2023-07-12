@@ -5,12 +5,13 @@ export const ContainerCard = styled.div`
     width: 300px;
     height: 320px;
     text-align: center;
-    background: rgba(218, 88, 102, 0.24);
+    background: #da58663d;
+    background-color: ${props => (props.darkMode ? '#fffdfd3b' :'#da58663d')};
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 30px #00000019;
     backdrop-filter: blur(5.5px);
     -webkit-backdrop-filter: blur(5.5px);
-    border: 1px solid rgba(218, 88, 102, 0.3);
+    border: 1px solid #da58664c;
     transition: transform 0.3s ease-in-out;
     &:hover {
         transform: scale(1.1); 
@@ -50,7 +51,8 @@ export const ButtonProject = styled.a`
     transition: background-color 0.4s ease-in-out;
     &:hover {
         border: 1px solid ${colors.color6};
-        color:  ${colors.color6};
+        background-color: ${props => (props.darkMode ? colors.color6 :'transparent')};
+        color:  ${props => (props.darkMode ? colors.bgColor : colors.color6)};
     }
 `;
 
@@ -66,6 +68,7 @@ export const ButtonGitHub = styled.a`
     transition: background-color 0.4s ease-in-out;
     &:hover {
         border: 1px solid ${colors.color6};
-        color:  ${colors.color6};
+        background-color: ${props => (props.darkMode ? colors.color6 :'transparent')};
+        color:  ${props => (props.darkMode ? colors.bgColor : colors.color6)};
     }
 `;

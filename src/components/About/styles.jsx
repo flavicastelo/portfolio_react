@@ -3,7 +3,7 @@ import { colors } from "../../themes";
 
 export const ContainerAbout = styled.section` 
     display: flex;
-    background-color: ${colors.color2};
+    background-color: ${props => (props.darkMode ? colors.contrastColor : colors.color2)};
     flex-direction: column;    
     padding: 2rem;
     align-items: center;
@@ -35,7 +35,7 @@ export const ContainerTextAbout = styled.div`
 `;
 
 export const DescriptionAbout = styled.p`
-    color: ${colors.color5};
+   color: ${props => (props.darkMode ? colors.color2 : colors.color5)};
     font-size: 14px;
     margin-top: 1rem;
     text-align: justify;

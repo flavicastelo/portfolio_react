@@ -1,6 +1,6 @@
 export const colors = {
     bgColor: '#252627',
-    contrastColor: '#a374da',
+    contrastColor: '#353434',
     principalColor: '#afafaf',
     color1: '#B3916F',
     color2: '#fffceb',

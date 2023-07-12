@@ -3,7 +3,7 @@ import { colors } from "../../themes";
 
 export const ContainerExperience = styled.section` 
     display: flex;
-    background-color: ${colors.color2};
+    background-color: ${props => (props.darkMode ? colors.contrastColor : colors.color2)};
     flex-direction: column;    
     justify-content: center;
     align-items: center;
@@ -26,7 +26,7 @@ export const TextTitleXp = styled.p`
     margin-bottom: 0.5rem;
 `;
 export const DescriptionXp = styled.p`
-    color: ${colors.color5};
+     color: ${props => (props.darkMode ? colors.color2 : colors.color5)};
     font-size: 14px;
     text-align: justify;
     margin-bottom: 1rem;

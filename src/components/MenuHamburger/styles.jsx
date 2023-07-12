@@ -3,7 +3,7 @@ import { colors } from "../../themes";
 
 export const ContainerMenu = styled.div`
     padding: 0.5rem;
-    background-color: ${colors.color3}; 
+    background-color: ${props => (props.darkMode ? colors.bgColor : colors.color3)};
     position: fixed;
     top: 0;
     left: 0;

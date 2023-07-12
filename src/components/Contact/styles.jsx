@@ -3,7 +3,7 @@ import { colors } from "../../themes";
 
 export const ContainerContact = styled.section`
     display: flex;
-    background-color: ${colors.color2};
+    background-color: ${props => (props.darkMode ? colors.contrastColor : colors.color2)};
     justify-content: center;
     align-items: center;
     padding: 3rem;
@@ -57,5 +57,5 @@ export const TitleContact = styled.p`
 `;
 
 export const DescriptionContact = styled.p`
-    
+     color: ${props => (props.darkMode ? colors.color2 : colors.color5)};
 `;

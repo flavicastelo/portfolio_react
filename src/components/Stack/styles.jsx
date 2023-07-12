@@ -4,7 +4,7 @@ import { colors } from "../../themes";
 export const ContainerStack = styled.section`
     display: flex;
     align-items: top;
-    background-color: ${colors.color2};
+    background-color: ${props => (props.darkMode ? colors.contrastColor : colors.color2)};
     padding: 3rem;
     gap: 1rem;
     height: 100vh;
@@ -90,7 +90,7 @@ export const TextTitleStack = styled.p`
     margin-bottom: 1rem;
 `;
 export const DescriptionStack = styled.p`
-    color: ${colors.color5};
+    color: ${props => (props.darkMode ? colors.color2 : colors.color5)};
     font-size: 14px;
     text-align: justify;
    
