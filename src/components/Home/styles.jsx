@@ -1,11 +1,35 @@
-import styled, { keyframes, css } from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { colors } from "../../themes";
 
+//animacoes
+const fadeInLeft = keyframes`
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+`;
+const fadeInRight = keyframes`
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+`;
+
+//estilos
 export const ContainerHome = styled.section` 
     display: flex;
     background-color: ${colors.color2};
     flex-direction: column;    
     padding: 2rem;
+    align-items: center;
     padding-right: 0;
     @media (max-width: 768px) {
         padding-right: 2rem;
@@ -30,6 +54,7 @@ export const ContainerText = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    animation: ${fadeInLeft} 2s ease-in-out;
 
 `;
 export const TextTitle = styled.p`
@@ -45,6 +70,7 @@ export const Description = styled.p`
     font-size: 14px;
     margin-top: 1rem;
     text-align: justify;
+    
 `;
 export const ImgProfile = styled.img`
     height: 400px;
@@ -52,6 +78,7 @@ export const ImgProfile = styled.img`
     /* background-color: ${colors.color3}; */
     margin: 2rem auto;
     margin-top: 0;
+    animation: ${fadeInRight} 2s ease-in-out;
     @media (max-width: 768px) {
         height: 150px;
     }
@@ -64,3 +91,5 @@ export const DivInLine = styled.div`
     display: flex;
     flex-direction: row;
 `;
+
+

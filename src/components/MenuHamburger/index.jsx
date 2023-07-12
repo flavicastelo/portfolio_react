@@ -1,4 +1,4 @@
-import { ContainerMenu, ContentButton, ButtonMenu, ButtonCurriculum, ContainerIcons, ContainerOpen, LinkIcon } from "./styles";
+import { ContainerMenu, ContainerIcons,  } from "./styles";
 import HomeIcon from '@mui/icons-material/Home';
 import Face2Icon from '@mui/icons-material/Face2';
 import CodeIcon from '@mui/icons-material/Code';

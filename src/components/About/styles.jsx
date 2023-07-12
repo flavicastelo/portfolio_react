@@ -6,12 +6,13 @@ export const ContainerAbout = styled.section`
     background-color: ${colors.color2};
     flex-direction: column;    
     padding: 2rem;
-    
+    align-items: center;
 `;
 
 export const ContainerBodyAbout = styled.body`
     margin: 2rem;
     height: 100%;
+    width: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -19,6 +20,7 @@ export const ContainerBodyAbout = styled.body`
         flex-direction: column;
         margin: 0;
         height: 90.5vh;
+        width: 100%;
     }
 `;
 export const ContainerTextAbout = styled.div`

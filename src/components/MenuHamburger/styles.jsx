@@ -17,41 +17,4 @@ export const ContainerIcons = styled.div`
     align-items: center;
     justify-content: center;
 `;
-export const ContainerOpen= styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: start;
-`;
-export const ContentButton = styled.div`
-    display: flex;
-    flex-direction: column;
-    margin-left: 6px;
-    width: 25vw;
-    justify-content: space-between;
-    align-items: start;
-    position: absolute; 
-    top: 10%; 
-    gap: 0.5rem;
-`;
-export const ButtonMenu = styled.button`
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    color: ${colors.color5};
-    top: 2rem;
-    font-size: 12px;
-`;
-export const ButtonCurriculum = styled.a`
-    text-decoration: none;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    color: ${colors.color6};
-    font-size: 12px;
-`;
-export const LinkIcon = styled.a`
-    text-decoration: none;
-    color: ${colors.color5};
-    
-`;
+

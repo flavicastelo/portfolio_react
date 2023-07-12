@@ -1,45 +1,35 @@
 import styled from 'styled-components';
+import { colors } from "../../themes";
 
+export const ContainerMenu = styled.div`
+    padding: 0.5rem;
+    background-color: ${colors.color3}; 
+    position: fixed;
+    border-radius: 20px;
+    top: 25vh;
+    right: 4vw;
+    z-index: 2;
+    width: 80px;
+    height: 50vh;
+    
+`;
 export const ContainerIcons = styled.div`
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content:end;
+    flex-direction: column;
+    height: 50vh;
+    position: relative;
     gap: 2rem;
-    width: 100vw;
-    height: 2rem;
-    padding-right: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `;
 
-export const ItemMenu = styled.button`
-    background-color: ${(props) => props.clicked ? '#00a2dd': 'transparent'};
+export const ButtonOpen = styled.button`
+     background-color: ${(props) => props.clicked ? '#00a2dd': 'transparent'};
     border: none;
     outline: 0;
     cursor: pointer;
     border-radius: 5px;
     height: 1.5em;
-    &:hover{
-        background-color: #00a2dd;
-    } 
-`;
-
-export const TextMenu = styled.p`
-    color: #FFF;
-    padding: 0 1rem;
-   
-`;
-
-export const LinkCurriculo = styled.a`
-  text-decoration: none;
-`;
-export const CurriculoBtn = styled.button`
-    background-color: transparent;
-    border: 1px solid #00a2dd;
-    border-radius: 5px;
-    outline: 0;
-    cursor: pointer;
-    height: 1.5em;
-     
     &:hover{
         background-color: #00a2dd;
     } 

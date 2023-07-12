@@ -7,6 +7,8 @@ import MenuHamburger from '../src/components/MenuHamburger';
 import Home from './components/Home';
 import About from './components/About';
 import Stack from './components/Stack';
+import Experience from './components/Experience';
+import Contact from './components/Contact';
 
 function App() {
   const isMobile = useMediaQuery({ maxWidth: 768 });
@@ -21,6 +23,8 @@ function App() {
       <Home />
       <About />
       <Stack />
+      <Experience />
+      <Contact />
       </>
   )
 }

@@ -1,4 +1,4 @@
-import { ContainerIconsStack, ContainerStack, ContainerText, DescriptionStack, ImgStack, ImgStackQ, TextTitleStack } from "./styles";
+import { ContainerBodyStack, ContainerIconsStack, ContainerStack, ContainerText, DescriptionStack, ImgStack, ImgStackQ, TextTitleStack } from "./styles";
 import html from '../../assets/html.png';
 import css from '../../assets/css.png';
 import js from '../../assets/js.png';
@@ -10,6 +10,7 @@ export default function Stack() {
     return (
 
         <ContainerStack id="stack">
+            <ContainerBodyStack>
             <ContainerText>
                 <TextTitleStack>
                     Tecnologias
@@ -27,6 +28,8 @@ export default function Stack() {
                 <ImgStackQ src={react} />
                 <ImgStack src={flutter} />
             </ContainerIconsStack>
+            </ContainerBodyStack>
+            
         </ContainerStack>
 
 
