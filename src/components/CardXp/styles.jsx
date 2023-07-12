@@ -2,6 +2,9 @@ import styled from 'styled-components';
 import { colors } from "../../themes";
 
 export const ContainerCard = styled.div`
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
     width: 300px;
     height: 320px;
     text-align: center;
@@ -21,7 +24,7 @@ export const ImgCard = styled.img`
     width: 90%;
     border-radius: 20px;
     margin-top: 1rem;
-    
+    align-self: center;
 `;
 export const TitleCard = styled.h4`
     margin-top: 0.5rem;
@@ -36,7 +39,7 @@ export const ContainerButtons = styled.div`
     display: flex;
     width: 100%;
     justify-content: space-evenly;
-    margin-top: 1rem;
+    padding-bottom: 1rem;
 `;
 
 export const ButtonProject = styled.a`
