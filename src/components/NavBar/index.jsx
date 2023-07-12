@@ -1,9 +1,10 @@
-import { ContainerMenu, ContainerIcons, } from "./styles";
+import { ContainerMenu, ContainerIcons, ButtonOpen, ButtonClose, } from "./styles";
 import HomeIcon from '@mui/icons-material/Home';
 import Face2Icon from '@mui/icons-material/Face2';
 import CodeIcon from '@mui/icons-material/Code';
 import WorkIcon from '@mui/icons-material/Work';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
+import AddIcon from '@mui/icons-material/Add';
 import { Link } from "react-scroll";
 import { useState } from "react";
 
@@ -14,8 +15,8 @@ export default function NavBar() {
       };
     return (
         
-        <ContainerMenu>
-            <ContainerIcons>
+        <ContainerMenu showMenu={showMenu}>
+            {showMenu ? (<><ContainerIcons>
                 <Link
                     to="home"
                     activeClass='active'
@@ -23,7 +24,7 @@ export default function NavBar() {
                     spy={true}
                     style={{ cursor: 'pointer' }}
                 >
-                    <HomeIcon style={{color: '#DA5866'}}/>
+                    <HomeIcon style={{ color: '#DA5866' }} />
                 </Link>
                 <Link to="about"
                     activeClass='active'
@@ -31,7 +32,7 @@ export default function NavBar() {
                     spy={true}
                     style={{ cursor: 'pointer' }}
                 >
-                    <Face2Icon style={{color: '#DA5866'}} />
+                    <Face2Icon style={{ color: '#DA5866' }} />
                 </Link>
                 <Link to="stack"
                     activeClass='active'
@@ -39,7 +40,7 @@ export default function NavBar() {
                     spy={true}
                     style={{ cursor: 'pointer' }}
                 >
-                    <CodeIcon style={{color: '#DA5866'}}/>
+                    <CodeIcon style={{ color: '#DA5866' }} />
                 </Link>
                 <Link to="experience"
                     activeClass='active'
@@ -47,7 +48,7 @@ export default function NavBar() {
                     spy={true}
                     style={{ cursor: 'pointer' }}
                 >
-                    <WorkIcon style={{color: '#DA5866'}}/>
+                    <WorkIcon style={{ color: '#DA5866' }} />
                 </Link>
                 <Link to="contact"
                     activeClass='active'
@@ -55,11 +56,13 @@ export default function NavBar() {
                     spy={true}
                     style={{ cursor: 'pointer' }}
                 >
-                    <AlternateEmailIcon style={{color: '#DA5866'}}/>
+                    <AlternateEmailIcon style={{ color: '#DA5866' }} />
                 </Link>
 
-              
-            </ContainerIcons>
+
+            </ContainerIcons><ButtonClose onClick={toggleMenu} clicked={showMenu}>X</ButtonClose></>
+            ) : (<ButtonOpen onClick={toggleMenu} clicked={showMenu}><AddIcon style={{ color: '#ffffff' }}/></ButtonOpen>)}
+            
         </ContainerMenu>
 
 
