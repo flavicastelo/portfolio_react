@@ -3,7 +3,7 @@ import { colors } from "../../themes";
 
 export const ContainerExperience = styled.section` 
     display: flex;
-    background-color: ${props => (props.darkMode ? colors.contrastColor : colors.color2)};
+    background-color: ${props => (props.darkMode ? colors.contrastColor : colors.bgLightMode)};
     flex-direction: column;    
     justify-content: center;
     align-items: center;
@@ -34,11 +34,14 @@ export const DescriptionXp = styled.p`
 export const ContainerCards = styled.div`
     display: flex;   
     flex-direction: row;
-    gap: 2rem;
+    gap: 1rem;
+    padding: 0 10rem;
     align-items: center;
     margin-top: 0.5rem;
     @media (max-width: 768px) {
         flex-direction: column;
+        padding: 0;
+        margin: 0;
     }
 `;
 

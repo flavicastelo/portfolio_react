@@ -3,7 +3,7 @@ import { colors } from "../../themes";
 
 export const ContainerContact = styled.section`
     display: flex;
-    background-color: ${props => (props.darkMode ? colors.contrastColor : colors.color2)};
+    background-color: ${props => (props.darkMode ? colors.contrastColor : colors.bgLightMode)};
     justify-content: center;
     align-items: center;
     padding: 3rem;

@@ -3,7 +3,7 @@ import { colors } from "../../themes";
 
 export const ContainerAbout = styled.section` 
     display: flex;
-    background-color: ${props => (props.darkMode ? colors.contrastColor : colors.color2)};
+    background-color: ${props => (props.darkMode ? colors.contrastColor : colors.bgLightMode)};
     flex-direction: column;    
     padding: 2rem;
     align-items: center;
@@ -43,6 +43,7 @@ export const DescriptionAbout = styled.p`
 export const PhotoProfile = styled.img`
     height: 400px;
     border-radius: 50%;
+    filter: drop-shadow(0 -30px 100px ${colors.color6}); 
     /* background-color: ${colors.color3}; */
     margin: 2rem auto;
     margin-top: 0;

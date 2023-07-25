@@ -26,7 +26,7 @@ const fadeInRight = keyframes`
 //estilos
 export const ContainerHome = styled.section` 
     display: flex;
-    background-color: ${props => (props.darkMode ? colors.contrastColor : colors.color2)};
+    background-color: ${props => (props.darkMode ? colors.contrastColor : colors.bgLightMode)};
     flex-direction: column;    
     padding: 2rem;
     align-items: center;
@@ -58,7 +58,7 @@ export const ContainerText = styled.div`
 
 `;
 export const TextTitle = styled.p`
-     color: ${props => (props.darkMode ? colors.color2 : colors.color5)};
+    color: ${props => (props.darkMode ? colors.color2 : colors.color5)};
     font-size: 24px;
 `;
 export const Name = styled.h1`
@@ -75,7 +75,7 @@ export const Description = styled.p`
 export const ImgProfile = styled.img`
     height: 400px;
     border-radius: 50%;
-   
+    
     margin: 2rem auto;
     margin-top: 0;
     animation: ${fadeInRight} 2s ease-in-out;

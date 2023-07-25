@@ -4,7 +4,7 @@ import { colors } from "../../themes";
 export const ContainerStack = styled.section`
     display: flex;
     align-items: top;
-    background-color: ${props => (props.darkMode ? colors.contrastColor : colors.color2)};
+    background-color: ${props => (props.darkMode ? colors.contrastColor : colors.bgLightMode)};
     padding: 3rem;
     gap: 1rem;
     height: 100vh;

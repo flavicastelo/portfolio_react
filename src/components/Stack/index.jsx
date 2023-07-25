@@ -5,6 +5,7 @@ import js from '../../assets/js.png';
 import nodejs from '../../assets/nodejs.png';
 import react from '../../assets/react.png';
 import flutter from '../../assets/flutter.png';
+import styledcomponents from '../../assets/styledComponents.png';
 
 export default function Stack(props) {
     const { darkMode } = props;
@@ -16,7 +17,7 @@ export default function Stack(props) {
                         Tecnologias
                     </TextTitleStack>
                     <DescriptionStack darkMode={darkMode}>
-                        Essas são algumas das tecnologias com as quais estou familiarizado e confortável em trabalhar. Estou sempre aprendendo e atualizando minhas habilidades para acompanhar as tendências e avanços da indústria de tecnologia.
+                        Essas são algumas das tecnologias com as quais estou familiarizada e confortável em trabalhar. Estou sempre aprendendo e atualizando minhas habilidades para acompanhar as tendências e avanços da indústria de tecnologia.
                     </DescriptionStack>
                 </ContainerText>
 
@@ -27,6 +28,7 @@ export default function Stack(props) {
                     <ImgStackQ src={nodejs} />
                     <ImgStackQ src={react} />
                     <ImgStack src={flutter} />
+                    <ImgStack src={styledcomponents} />
                 </ContainerIconsStack>
             </ContainerBodyStack>
 

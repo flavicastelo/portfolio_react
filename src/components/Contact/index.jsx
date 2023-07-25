@@ -5,6 +5,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 import { ContainerBodyContact, ContainerContact, ContainerIconsContact, ContainerTextContact, DescriptionContact, LinkContact, TitleContact } from './styles';
 
+
 export default function Contact(props) {
     const { darkMode } = props;
     return (

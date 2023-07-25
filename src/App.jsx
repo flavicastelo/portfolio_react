@@ -21,17 +21,18 @@ function App() {
 
   return (
     <>
+    {/* <MenuHamburger darkMode={darkMode} toggleDarkMode={toggleDarkMode} /> */}
       {isMobile ? (
         <MenuHamburger darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       ) : (
-        <NavBar  darkMode={darkMode}  />
+        <NavBar  darkMode={darkMode}  toggleDarkMode={toggleDarkMode} />
       )}
       <Home darkMode={darkMode} />
       <About darkMode={darkMode} />
       <Stack darkMode={darkMode} />
       <Experience darkMode={darkMode} />
       <Contact darkMode={darkMode} />
-      {isMobile ? (null): (<ButtonDarkMode darkMode={darkMode} toggleDarkMode={toggleDarkMode} />)}
+      {/* {isMobile ? (null): (<ButtonDarkMode darkMode={darkMode} toggleDarkMode={toggleDarkMode} />)} */}
     </>
   );
 }

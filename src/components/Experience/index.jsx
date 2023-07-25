@@ -2,21 +2,53 @@ import CardXp from "../CardXp";
 import games from '../../assets/games.png';
 import cookies from '../../assets/cookie.png';
 import { ButtonProjects, ContainerCards, ContainerExperience, ContainerTextXp, DescriptionXp, TextTitleXp } from "./styles";
-
+import html from '../../assets/html.png';
+import css from '../../assets/css.png';
+import js from '../../assets/js.png';
+import nodejs from '../../assets/nodejs.png';
+import react from '../../assets/react.png';
+import flutter from '../../assets/flutter.png';
+import styledcomponents from '../../assets/styledComponents.png';
 
 export default function Experience(props) {
-    const title1 = 'Frontend API de Jogos';
-    const desc1 = 'Frontend feito para listar jogos, desenvolvido com ReactJs e Styled Components';
-    const github1 = 'https://github.com/flavicastelo/projeto_front_end_game';
-    const project1 = 'https://projeto-front-end-game.vercel.app/';
-    const title2 = 'Cookie Game';
-    const desc2 = 'Jogo onde o personagem pula obstáculos, desenvolvido com HTML, Javascript e CSS';
-    const github2 = 'https://github.com/flavicastelo/cookiegame';
-    const project2 = 'https://vercel.com/flavicastelo/cookiegame';
-    const title3 = 'TubeYou';
-    const desc3 = 'CRUD de cadastro de videos, desenvolvido com Reactjs, MongoDB, NodeJs e Styled Components';
-    const github3 = 'https://github.com/flavicastelo/TubeYou';
     const { darkMode } = props;
+    const projects = [
+        {
+            image: games,
+            title: 'Frontend API de Jogos',
+            description: 'Galeria de jogos.',
+            github: 'https://github.com/flavicastelo/projeto_front_end_game',
+            project: 'https://projeto-front-end-game.vercel.app/',
+            stack: [
+                { src: react, text: 'React' },
+                { src: styledcomponents, text: 'Styled Components' },
+            ],
+        },
+        {
+            image: cookies,
+            title: 'Cookie Game',
+            description: 'Jogo onde o personagem pula obstáculos.',
+            github: 'https://github.com/flavicastelo/cookiegame',
+            project: 'https://vercel.com/flavicastelo/cookiegame',
+            stack: [
+                { src: html, text: 'HTML' },
+                { src: css, text: 'CSS' },
+                { src: js, text: 'Javascript' },
+            ],
+        },
+        {
+            image: games,
+            title: 'TubeYou',
+            description: 'Site baseado no Youtube, para cadastro de vídeos.',
+            github: 'https://github.com/flavicastelo/TubeYou',
+            stack: [
+                { src: react, text: 'React' },
+                { src: nodejs, text: 'NodeJs' },
+                { src: styledcomponents, text: 'Styled Components' },
+            ],
+        },
+    ];
+
 
     return (
         <ContainerExperience darkMode={darkMode} id="experience">
@@ -30,9 +62,18 @@ export default function Experience(props) {
                 <ButtonProjects target="_blank" href="https://github.com/flavicastelo?tab=repositories">Ver Todos</ButtonProjects>
             </ContainerTextXp>
             <ContainerCards>
-                <CardXp darkMode={darkMode} image={games} title={title1} description={desc1} github={github1} project={project1} />
-                <CardXp darkMode={darkMode} image={cookies} title={title2} description={desc2} github={github2} project={project2} />
-                <CardXp darkMode={darkMode} image={games} title={title3} description={desc3} github={github3} />
+                {projects.map((project, index) => (
+                    <CardXp
+                        key={index}
+                        darkMode={darkMode}
+                        image={project.image}
+                        title={project.title}
+                        description={project.description}
+                        github={project.github}
+                        project={project.project}
+                        stack={project.stack}
+                    />
+                ))}
             </ContainerCards>
         </ContainerExperience>
     );
