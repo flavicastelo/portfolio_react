@@ -32,6 +32,9 @@ export const ContainerAbout = styled.section`
     padding: 2rem;
     align-items: center;
     padding-top: 8rem;
+    @media (max-width: 768px) {
+        padding-top: 4rem;
+    }
 `;
 
 export const ContainerBodyAbout = styled.body`

@@ -31,6 +31,7 @@ export const ContainerHome = styled.section`
     padding: 2rem;
     align-items: center;
     padding-right: 0;
+    justify-content: start;
     @media (max-width: 768px) {
         padding-right: 2rem;
     }
@@ -42,7 +43,7 @@ export const ContainerBody = styled.body`
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
-    justify-content: center;
+    justify-content: start;
     @media (max-width: 768px) {
         flex-direction: column;
         margin: 0;
