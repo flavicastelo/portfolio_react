@@ -70,7 +70,7 @@ export default function NavBar(props) {
                     spy={true}
                     style={{ cursor: 'pointer' }}
                 >
-                    <MenuItens darkMode={darkMode}>Contatos</MenuItens>
+                    <MenuItens darkMode={darkMode} >Contatos</MenuItens>
                 </Link>
 
             </ContainerItens>

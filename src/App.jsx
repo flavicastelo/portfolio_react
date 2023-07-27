@@ -10,6 +10,7 @@ import Stack from './components/Stack';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
 import ButtonDarkMode from './components/ButtonDakMode';
+import NavBottom from './components/NavMobile';
 
 function App() {
   const isMobile = useMediaQuery({ maxWidth: 768 });
@@ -23,7 +24,7 @@ function App() {
     <>
     {/* <MenuHamburger darkMode={darkMode} toggleDarkMode={toggleDarkMode} /> */}
       {isMobile ? (
-        <MenuHamburger darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+        <NavBottom darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       ) : (
         <NavBar  darkMode={darkMode}  toggleDarkMode={toggleDarkMode} />
       )}

@@ -1,13 +1,15 @@
 import { ButtonGitHub, ButtonProject, ContainerButtons, ContainerCard, DescriptionCard, ImgCard, TitleCard, IconStack, ContainerStack, TagStack, TextStack, LineStack } from "./styles";
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import useIntersectionObserver from "../../utils/animations.jsx";
 
 export default function CardXp(props) {
     const { darkMode, image, description, stack } = props;
+    const { sectionRef, isVisible } = useIntersectionObserver();
     return (
-        <ContainerCard darkMode={darkMode}>
+        <ContainerCard ref={sectionRef} isVisible={isVisible}  darkMode={darkMode}>
             <ImgCard src={image} />
 
-            <TitleCard>{props.title}</TitleCard>
+            <TitleCard darkMode={darkMode}>{props.title}</TitleCard>
             {/* <LineStack /> */}
             <DescriptionCard>{description}</DescriptionCard>
 

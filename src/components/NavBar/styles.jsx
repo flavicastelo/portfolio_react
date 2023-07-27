@@ -97,11 +97,36 @@ export const ContainerItens = styled.div`
    align-items: center;
 `;
 export const MenuItens = styled.a`
-    text-decoration: none;
-    color: ${props => (props.darkMode ? colors.color2 : colors.color5)};
-    font-weight: bold;
-    font-family: 'Inter', cursive;
-    font-size: 14px;
+   text-decoration: none;
+  color: ${props => (props.darkMode ? colors.color2 : colors.color5)};
+  font-weight: bold;
+  font-family: 'Inter', cursive;
+  font-size: 14px;
+  position: relative;
+  /* &:hover {
+    color: #01d0c0;
+    background-image: linear-gradient(to right, #01d0c0, #1bfdea);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent; */
+   
+  &::after {
+    content: "";
+    position: absolute;
+    top: 1.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-image: linear-gradient(to right, #01d0c0, #1bfdea);
+    display: none;
+  }
+
+  &:hover::after {
+    display: block;
+  }
+  
 `;
 
 const progressBarAnimation = keyframes`

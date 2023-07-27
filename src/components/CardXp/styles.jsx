@@ -1,5 +1,16 @@
-import styled from 'styled-components';
+import styled, {keyframes, css} from 'styled-components';
 import { colors } from "../../themes";
+
+const fadeInUp = keyframes`
+  0% {
+    opacity: 0;
+    transform:  scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+`;
 
 export const ContainerCard = styled.div`
     display: flex;
@@ -8,18 +19,25 @@ export const ContainerCard = styled.div`
     width: calc(33.33333%-2rem);
     height: 380px;
     background: #da58663d;
-    background-color: ${props => (props.darkMode ? '#fffdfd3b' :'#ffffff')};
+    background-color: ${props => (props.darkMode ? '#313131' :'#ffffff')};
     border-radius: 4px;
-    box-shadow: 0 4px 5px #00000019;
+    box-shadow: 0 4px 5px #0000005f;
     backdrop-filter: blur(5.5px);
     -webkit-backdrop-filter: blur(5.5px);
     overflow: hidden;
+    @media (min-width: 769px) {
+        ${({ isVisible }) =>
+            isVisible &&
+            css`
+                animation: ${fadeInUp} 2s ease-in-out;
+            `}
+    }
     @media (max-width: 768px) {
         width: auto;
     }
     transition: transform 0.3s ease-in-out;
     &:hover {
-        box-shadow: 0 4px 5px #00000060;
+        box-shadow: 0 4px 5px #000000;
     }
 `;
 export const ImgCard = styled.img`
@@ -33,7 +51,7 @@ export const ImgCard = styled.img`
 `;
 export const TitleCard = styled.h4`
       margin: 0.5rem 1rem 0;
-      border-bottom: 1px solid rgb(231, 230, 230);
+      border-bottom:  ${props => (props.darkMode ? ' 1px solid #272626' :' 1px solid rgb(231, 230, 230)')};;
 `;
 
 export const DescriptionCard = styled.p`

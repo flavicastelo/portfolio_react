@@ -1,11 +1,33 @@
-import styled from 'styled-components';
+import styled, { keyframes, css } from "styled-components";
 import { colors } from "../../themes";
+
+const fadeInTop = keyframes`
+    from {
+        opacity: 0;
+        transform: translatey(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+`;
+const fadeInUp = keyframes`
+  0% {
+    opacity: 0;
+    transform:  scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+`;
 
 export const ContainerStack = styled.section`
     display: flex;
     align-items: top;
     background-color: ${props => (props.darkMode ? colors.contrastColor : colors.bgLightMode)};
     padding: 3rem;
+    padding-top: 8rem;
     gap: 1rem;
     height: 100vh;
     align-items: center;
@@ -22,9 +44,10 @@ export const ContainerBodyStack = styled.body`
     margin: 2rem;
     height: 100%;
     display: flex;
-    align-items: start;
-    width: 80%;
+    align-items: center;
+    width: 100%;
     gap: 2rem;
+    flex-direction: column;
     @media (max-width: 768px) {
         flex-direction: column;
         margin: 0;
@@ -39,8 +62,8 @@ export const ContainerIconsStack = styled.div`
     flex-wrap: wrap;
     justify-content:space-between;
     padding: 0.5rem;
-    gap: 5rem;
-    width: 50%;
+    width: 80%;
+    align-items: center;
      @media (max-width: 768px) {
         margin-top: 2rem;
         flex-direction: row;
@@ -51,11 +74,19 @@ export const ContainerIconsStack = styled.div`
         width: 100%;
     } 
 `;
+
 export const ImgStack = styled.img`
     margin-top: 0;
     width: 75px;
     height: 100px;
     transition: transform 0.3s ease-in-out;
+    @media (min-width: 769px) {
+        ${({ isVisible }) =>
+            isVisible &&
+            css`
+                animation: ${fadeInUp} 2s ease-in-out;
+            `}
+    }
     @media (max-width: 768px) {
         width: 75px;
     }
@@ -67,7 +98,16 @@ export const ImgStackQ = styled.img`
     margin-top: 0;
     width: 87px;
     height: 87px;
+    
     transition: transform 0.3s ease-in-out;
+    @media (min-width: 769px) {
+        ${({ isVisible }) =>
+            isVisible &&
+            css`
+                animation: ${fadeInUp} 2s ease-in-out;
+            `}
+    }
+
     @media (max-width: 768px) {
         width: 87px;
         height: 87px;
@@ -79,7 +119,14 @@ export const ImgStackQ = styled.img`
 export const ContainerText = styled.div`
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 80%;
+    @media (min-width: 769px) {
+        ${({ isVisible }) =>
+            isVisible &&
+            css`
+                animation: ${fadeInTop} 2s ease-in-out;
+            `}
+    }
     @media (max-width: 768px) {
         width: 100%;
     }

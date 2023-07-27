@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes, css } from "styled-components";
 import { colors } from "../../themes";
 
 //animacoes
@@ -54,8 +54,13 @@ export const ContainerText = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    animation: ${fadeInLeft} 2s ease-in-out;
-
+    @media (min-width: 769px) {
+        ${({ isVisible }) =>
+            isVisible &&
+            css`
+                animation: ${fadeInLeft} 2s ease-in-out;
+            `}
+    }
 `;
 export const TextTitle = styled.p`
     color: ${props => (props.darkMode ? colors.color2 : colors.color5)};
@@ -78,7 +83,13 @@ export const ImgProfile = styled.img`
     
     margin: 2rem auto;
     margin-top: 0;
-    animation: ${fadeInRight} 2s ease-in-out;
+    @media (min-width: 769px) {
+        ${({ isVisible }) =>
+            isVisible &&
+            css`
+                animation: ${fadeInRight} 2s ease-in-out;
+            `}
+    }
     @media (max-width: 768px) {
         height: 150px;
     }
